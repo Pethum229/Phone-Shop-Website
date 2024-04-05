@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Fonts */
+
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+        :root{
+            --font1: 'Abel', sans-serif;
+        }
+
+        /* Common */
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        h1{
+            font-family: var(--font1);
+            font-size: 60px;
+        }
+        h2{
+            font-family: var(--font1);
+            font-size: 40px;
+        }
+        h3{
+            font-family: var(--font1);
+            font-size: 30px;
+        }
+        h4{
+            font-family: var(--font1);
+            font-size: 20px;
+        }
+        p{
+            font-family: var(--font1);
+            font-size: 14px;
+        }
+        a{
+            font-family: var(--font1);
+        }
+        span{
+            font-family: var(--font1);
+        }
+
+        /* Header */
+
+        #header{
+            background: white;
+            /* display: flex; */
+            /* justify-content: center; */
+        }
+        #headerId{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        #rightPart{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #logo{
+            width: 250px;
+        }
+        /* .upArrow{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        } */
+        #navMenu{
+            display: flex;
+            align-items: center;
+        }
+        #navMenu >img{
+            width: 50px;
+            /* display: none; */
+        }
+        #navMenu >a{
+            text-transform: uppercase;
+            color: #7f114b;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: lighter;
+        }
+        #navMenu >span{
+            font-family: var(--font1);
+        }
+        #one, #two{
+            display: none;
+        }
+        #noBorderR{
+            border: none !important;
+        }
+        #menuIcon{
+            width: 35px;
+        }
+        #navMenu >a:hover , .activeLink{
+            background: url('Design 02 Resources/up-arrow.svg')no-repeat center bottom;
+            /* background-repeat: no-repeat;
+            background-position: center bottom; */
+        }
+
+        /* Contact Us */
+
+        #contactUs{
+            background:linear-gradient(90deg,#b11f4c 40%,#430049);
+        }
+        #contactUsId{
+            display: flex;
+            padding-top: 100px;
+        }
+        #contactUsId >img{
+            padding-left: 30px;
+            margin-bottom: -80px;
+        }
+        #contactLeft{
+            width: 50%;
+        }
+        #contactLeft >h1{
+            color: white;
+            text-transform: uppercase;
+        }
+        #contactLeft >p{
+            color: white;
+            font-size: 14px;
+            padding-top: 30px;
+            padding-bottom: 40px;
+        }
+        #phoneNo{
+            display: flex;
+            flex-direction: column;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .address{
+            font-size: 20px;
+            color: #e9afaf;
+            padding-left: 20px;
+        }
+        #phoneNo >span{
+            font-size: 20px;
+            color: #e9afaf;
+            padding-left: 20px;
+        }
+        #email {
+            font-size: 14px;
+            color: #e9afaf;
+            padding-left: 20px;
+        }
+
+        /* Contact Us Methods */
+
+        #contactUsMethods{
+            background: #44275d;
+        }
+        #form{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .field{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .field >input, .field >textarea{
+            border: none;
+            width: 100%;
+            background: #c8949f;
+            border-radius: 0 5px 5px 0 ;
+        }
+        .field>input{
+            height: 60px;
+        }
+        #textP{
+            height: 120px;
+        }
+        #textarea{
+            height: 120px;
+        }
+        .field >p{
+            background: #b01e4d;
+            height: 60px;
+            border-radius: 5px 0 0 5px;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+        .label{
+            width: 30%;
+        }
+        #sendMsg{
+            width: 50%;
+            padding-right: 50px;
+            box-sizing: border-box;
+        }
+        #ourBranches{
+            width: 50%;
+            padding-top: 60px;
+        }
+        #ourBranches >h2{
+            color: red;
+            font-size: 40px;
+        }
+        #sendMsg >h2{
+            text-transform: uppercase;
+            color: red;
+        }
+        #contactUsMethodsId{
+            display: flex;
+            padding-top: 80px;
+            padding-bottom: 200px;
+        }
+        #form >button{
+            background: #b01e4d;
+            font-size: 22px;
+            color: white;
+            text-transform: uppercase;
+            border: none;
+            padding: 15px 5px;
+            font-weight: bold;
+            width: 40%;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        .row >img{
+            padding-right: 25px;
+        }
+        .firstBranch >h3{
+            color: white;
+            margin-bottom: 20px;
+        }
+        #branchesContact{
+            padding-top: 60px;
+            padding-left: 50px;
+        }
+
+        /* Map Section */
+
+        #gMap{
+            margin-top: -120px;
+            width: 98%;
+            height: 400px;
+        }
+        #map{
+            padding-bottom: 100px;
+        }
+        #mapId{
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Footer */
+
+        #footer{
+            background: #241c1c;
+        }
+        #navMenu{
+            display: flex;
+            justify-content: center;
+        }
+        #navMenu >span{
+            padding: 0 5px;
+            color: #b11f4c;
+        }
+        #navMenu >a{
+            color: #b11f4c;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        #footerMenu{
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Media Query */
+
+        @media screen and (max-width:1250px) {
+            .wrapper{
+                width: 96%;
+            }
+        }
+
+        @media  screen and (max-width:1100px) {
+            #contactUsId >img{
+                width: 60%;
+                height: 60%;
+            }
+            #contactUsId{
+                padding-top: 50px;
+            }
+        }
+
+        @media screen and (max-width:850px) {
+            
+        }
+
+        @media screen and (max-width:800px) {
+            #contactUsId{
+                flex-direction: column;
+                align-items: center;
+            }
+            #contactLeft{
+                width: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #contactDetails{
+                width: 75%;
+            }
+            .row{
+                text-align: left;
+            }
+            #contactUsMethodsId{
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            #ourBranches{
+                text-align: center;
+                width: 80%;
+            }
+            #branchesContact{
+                padding: 10px 0 0 0;
+            }
+            #sendMsg{
+                width: 80%;
+                padding: 0;
+                text-align: center;
+                margin-top: 25px;
+            }
+            .field{
+                margin: 10px 0;
+            }
+            #form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            #navMenu{
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:550px) {
+            #contactDetails{
+                width: 96%;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            #sendMsg{
+                width: 100%;
+            }
+            .field >p{
+                padding-top: 0;
+            }
+        }
+
+        @media screen and (max-width:450px) {
+            #gMap{
+                height: 300px;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            .row{
+                flex-direction: column;
+                text-align: center;
+            }
+            .row >img{
+                padding: 0;
+            }
+            .address{
+                padding: 0;
+            }
+            #phoneNo >span{
+                padding: 0;
+            }
+            #email{
+                padding: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    
+    <header id="header">
+        <div id="headerId" class="wrapper">
+            <img id="logo" src="Design 02 Resources/logo.svg" alt="Logo">
+            <div id="rightPart">
+                <nav id="navMenu">
+                    <a href="index.html">Home</a>
+                    <span>|</span>
+                    <a href="phones.html">Phone & Accessories</a>
+                    <span>|</span>
+                    <a id="noBorderR" class="activeLink" href="contact-us.html">Contact Us</a>
+                </nav>
+                <img id="menuIcon" src="Design 02 Resources/menu-icon.svg" alt="Menu Icon">
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Us -->
+    <section id="contactUs">
+        <div id="contactUsId" class="wrapper">
+            <div id="contactLeft">
+                <h1>Contact Us</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellat repudiandae voluptas deleniti quod! Iste doloribus perspiciatis nesciunt facere quidem?</p>
+                <div id="contactDetails">
+                    <div class="row">
+                        <img src="Design 02 Resources/location-icon-purple.svg" alt="Location Icon">
+                        <span class="address">34/b Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus, hic mollitia debitis</span>
+                    </div>
+                    <div class="row">
+                        <img src="Design 02 Resources/call-icon-purple.svg" alt="Call Icon">
+                        <div id="phoneNo">
+                            <span>+012 345 6789</span>
+                            <span>+012 345 6789</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="Design 02 Resources/email-icon-purple.svg" alt="Email Icon">
+                        <span id="email">contact@sitename.com</span>
+                    </div>
+                </div>
+            </div>
+            <img src="Design 02 Resources/girl.png" alt="Girl">
+        </div>
+    </section>
+
+    <!-- Contact Us Methods -->
+
+    <section id="contactUsMethods">
+        <div id="contactUsMethodsId" class="wrapper">
+            <div id="sendMsg">
+                <h2>Send Your Message</h2>
+                <form id="form" action="">
+                    <div class="field">
+                        <p class="label">Your Name</p>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <p class="label">Email Address</p>
+                        <input type="email">
+                    </div>
+                    <div class="field">
+                        <p id="textP" class="label">Message</p>
+                        <textarea id="textarea"></textarea>
+                    </div>
+                    <button>Submit</button>
+                </form>
+            </div>
+            <div id="ourBranches">
+                <h2>Our Branches</h2>
+                <div id="branchesContact">
+                    <div class="firstBranch">
+                        <h3>Lorem, ipsum.</h3>
+                        <div class="row">
+                            <img src="Design 02 Resources/location-icon-pink.svg" alt="Location Icon">
+                            <span style="color: red; font-size: 20px;" >34/b Lorem ipsum dolor sit amet consectetur adipisicing kodcm lorem data breach</span>
+                        </div>
+                        <div class="row">
+                            <img src="Design 02 Resources/call-icon-pink.svg" alt="Location Icon">
+                            <span style="color: #e9afaf; font-size: 20px;">+012 345 6789/+012 987 6543</span>
+                        </div>
+                    </div>
+                    <div class="firstBranch">
+                        <h3>Yesolvio Leipum.</h3>
+                        <div class="row">
+                            <img src="Design 02 Resources/location-icon-pink.svg" alt="Location Icon">
+                            <span style="color: red; font-size: 20px;" >34/b Lorem ipsum dolor sit amet consectetur adipisicing kodcm lorem data breach</span>
+                        </div>
+                        <div class="row">
+                            <img src="Design 02 Resources/call-icon-pink.svg" alt="Location Icon">
+                            <span style="color: #e9afaf; font-size: 20px;">+012 345 6789/+012 987 6543</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+
+    <section id="map">
+        <div id="mapId" class="wrapper">
+            <iframe id="gMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.3609749610578!2d80.03251347499807!3d7.084084892918878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fb6a031eb25f%3A0x5d31d65e1bffe988!2sRevoise!5e0!3m2!1ssi!2slk!4v1697188174057!5m2!1ssi!2slk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div id="footerMenu" class="wrapper">
+            <nav id="navMenu">
+                <a href="index.html">Home</a><span>|</span>
+                <a href="phones.html">Phone & Accosseries</a><span>|</span>
+                <a href="contact-us.html">Contact Us</a>
+            </nav>
+            <p>All Rights Reserved (C) WebClass</p>
+        </div>
+    </footer>
+
+</body>
+</html>

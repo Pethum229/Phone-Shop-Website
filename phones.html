@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phones & Accessories</title>
+    <style>
+        /* Fonts */
+
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+        :root{
+            --font1: 'Abel', sans-serif;
+        }
+
+        /* Common */
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        h1{
+            font-family: var(--font1);
+            font-size: 60px;
+        }
+        h2{
+            font-family: var(--font1);
+            font-size: 40px;
+        }
+        h3{
+            font-family: var(--font1);
+            font-size: 30px;
+        }
+        h4{
+            font-family: var(--font1);
+            font-size: 20px;
+        }
+        p{
+            font-family: var(--font1);
+            font-size: 14px;
+        }
+        a{
+            font-family: var(--font1);
+        }
+        span{
+            font-family: var(--font1);
+        }
+
+        /* Header */
+
+        #header{
+            background: white;
+            /* display: flex; */
+            /* justify-content: center; */
+        }
+        #headerId{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        #rightPart{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #logo{
+            width: 250px;
+        }
+        /* .upArrow{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        } */
+        #navMenu{
+            display: flex;
+            align-items: center;
+        }
+        #navMenu >img{
+            width: 50px;
+            /* display: none; */
+        }
+        #navMenu >a{
+            text-transform: uppercase;
+            color: #7f114b;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: lighter;
+        }
+        #navMenu >span{
+            font-family: var(--font1);
+        }
+        #one, #two{
+            display: none;
+        }
+        #noBorderR{
+            border: none !important;
+        }
+        #menuIcon{
+            width: 35px;
+        }
+        #navMenu >a:hover , .activeLink{
+            background: url('Design 02 Resources/up-arrow.svg')no-repeat center bottom;
+            /* background-repeat: no-repeat;
+            background-position: center bottom; */
+        }
+
+        /* Phone & Accosseries */
+
+        #phones{
+            background:linear-gradient(90deg,#b11f4c 40%,#430049);
+        }
+        #phonesId{
+            display: flex;
+            padding: 40px 0;
+        }
+        #intro{
+            width: 50%;
+            padding-top: 40px;
+        }
+        #intro >h1{
+            color: white;
+            text-transform: uppercase;
+            line-height: 80px;
+            margin-bottom: 35px;
+        }
+        #intro >p{
+            color: #e9afaf;
+            margin-bottom: 20px;
+        }
+        #mainImg{
+            width: 50%;
+            text-align: center;
+        }
+        #mainImg >img{
+            width: 300px;
+        }
+
+        /* IPhones & Android */
+
+        #iPhoneIntro{
+            background: #44275d;
+            padding: 40px 0;
+        }
+        #title{
+            display: flex;
+            align-items: baseline;
+        }
+        #title >h2{
+            color: #c90b1b;
+        }
+        #title >span{
+            padding-left: 30px;
+            color: #c90b1b;
+            font-size: 20px;
+            font-weight: lighter;
+        }
+        #iPhoneIntroId >p{
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Phone Items */
+
+        #phoneItems{
+            background: #e6e6e6;
+            padding: 70px 0 60px 0;
+        }
+        #phoneItemsId{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .phoneItem{
+            background: white;
+            width: 49%;
+            margin-bottom: 20px;
+            display: flex;
+            padding: 30px;
+            box-sizing: border-box;
+            align-items: center;
+        }
+        .specs{
+            padding: 20px 0 20px 30px;
+        }
+        .specs >p{
+            padding-top: 20px;
+        }
+        .phoneImg >img{
+            width: 150px;
+        }
+        .specs >h2{
+            color: #c90b1b;
+            text-transform: uppercase;
+        }
+        .specs >span{
+            color: black;
+            text-transform: uppercase;
+            font-size: 40px;
+        }
+        .price{
+            font-size: 30px;
+        }
+
+        /* Accosseries Intro */
+
+        #accosriesIntro{
+            background: #44275d;
+            padding: 40px 0;
+        }
+        #title2{
+            display: flex;
+            align-items: baseline;
+        }
+        #title2 >h2{
+            color: #c90b1b;
+        }
+        #title2 >span{
+            padding-left: 30px;
+            color: #c90b1b;
+            font-size: 20px;
+            font-weight: lighter;
+        }
+        #accosriesIntroId >p{
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Accosseries Items */
+
+        #accosserieItems{
+            background: #e6e6e6;
+            padding: 70px 0 60px 0;
+        }
+        #accosserieItemsId{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .accosserieItem{
+            background: white;
+            width: 49%;
+            margin-bottom: 20px;
+            display: flex;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        .specs{
+            padding: 20px 0 20px 30px;
+        }
+        .specs >p{
+            padding-top: 20px;
+        }
+        .phoneImg >img{
+            width: 150px;
+        }
+        .specs >h2{
+            color: #c90b1b;
+            text-transform: uppercase;
+        }
+        .specs >span{
+            color: black;
+            text-transform: uppercase;
+            font-size: 40px;
+        }
+        .price{
+            font-size: 30px;
+        }
+
+        /* Footer */
+
+        #footer{
+            background: #241c1c;
+        }
+        #navMenu{
+            display: flex;
+            justify-content: center;
+        }
+        #navMenu >span{
+            padding: 0 5px;
+            color: #b11f4c;
+        }
+        #navMenu >a{
+            color: #b11f4c;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        #footerMenu{
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Media Query */
+
+        @media screen and (max-width:1250px) {
+            .wrapper{
+                width: 96%;
+            }
+        }
+
+        @media screen and (max-width:1100px) {
+            #intro{
+                padding-top: 0;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            .phoneImg >img{
+                width: 100px;
+            }
+            #phoneItems{
+                padding: 30px 0 0 0;
+                display: flex;
+                align-items: center;
+            }
+            .specs{
+                padding: 0 0 0 30px;
+            }
+            .specs >h2{
+                font-size: 30px;
+            }
+            .specs >span{
+                font-size: 25px;
+            }
+            .specs >p{
+                padding-top: 0;
+            }
+            .price{
+                font-size: 22px;
+            }
+        }
+
+        @media screen and (max-width:850px) {
+            #phonesId{
+                flex-direction: column-reverse;
+            }
+            #intro{
+                width: 100%;
+            }
+            #mainImg{
+                width: 100%;
+            }
+            #intro >h1{
+                text-align: center;
+                line-height: 60px;
+                margin-top: 20px;
+                margin-bottom: 18px;
+            }
+            #intro >p{
+                text-align: center;
+            }
+            .phoneItem{
+                width: 98%;
+            }
+            .specs >h2{
+                font-size: 40px;
+            }
+            .price{
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            #navMenu{
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:650px) {
+            #title{
+                flex-direction: column;
+                align-items: center;
+            }
+            #title >span{
+                padding-left: 0;
+                text-align: center;
+            }
+            #title >h2{
+                text-align: center;
+            }
+            #iPhoneIntroId >p{
+                text-align: center;
+            }
+            #title2{
+                flex-direction: column;
+                align-items: center;
+            }
+            #title2 >span{
+                padding-left: 0;
+                text-align: center;
+            }
+            #title2 >h2{
+                text-align: center;
+            }
+            #accosriesIntroId >p{
+                text-align: center;
+            }
+        } 
+
+        @media screen and (max-width:450px) {
+            .phoneItem{
+                flex-direction: column;
+                padding: 30px 10px;
+            }
+            .specs{
+                text-align: center;
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            #intro >h1{
+                font-size: 45px;
+                line-height: 40px;
+            }
+            #mainImg >img{
+                width: 80%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header id="header">
+        <div id="headerId" class="wrapper">
+            <img id="logo" src="Design 02 Resources/logo.svg" alt="Logo">
+            <div id="rightPart">
+                <nav id="navMenu">
+                    <a href="index.html">Home</a>
+                    <span>|</span>
+                    <a class="activeLink" href="phones.html">Phone & Accessories</a>
+                    <span>|</span>
+                    <a id="noBorderR" href="contact-us.html">Contact Us</a>
+                </nav>
+                <img id="menuIcon" src="Design 02 Resources/menu-icon.svg" alt="Menu Icon">
+            </div>
+        </div>
+    </header>
+
+    <!-- Phone & Accessories -->
+
+    <section id="phones">
+        <div id="phonesId" class="wrapper">
+            <div id="intro">
+                <h1>Phone <br> & Accessories</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum explicabo voluptates accusamus quas autem facilis aspernatur, exercitationem laudantium sit, magnam a recusandae aliquid praesentium nemo.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus mollitia quo esse, earum facere repellat fugit, atque labore cum quasi corrupti soluta est non error unde qui debitis? Tempora, architecto.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, fugiat minus. Facilis animi dolores aperiam nulla provident mollitia expedita eius.</p>
+            </div>
+            <div id="mainImg">
+                <img src="Design 02 Resources/two-phones.png" alt="Two Phones">
+            </div>
+        </div>
+    </section>
+
+    <!-- IPhones & Android -->
+
+    <section id="iPhoneIntro">
+        <div id="iPhoneIntroId" class="wrapper">
+            <div id="title">
+                <h2>Mobile Phones</h2>
+                <span>IPhones & Android</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nam pariatur voluptatum! Saepe, modi non nihil nisi ullam est expedita! Et qui est consectetur libero, fugit officia. A et doloribus voluptates mollitia totam possimus suscipit blanditiis iusto, quod dicta cumque perspiciatis perferendis voluptatibus quaerat nisi pariatur, ab ipsam, aliquam ad reprehenderit officiis? Iste inventore perferendis rerum at nemo nihil pariatur vitae recusandae ex? Similique facilis modi consequuntur delectus dolor esse.</p>
+        </div>
+    </section>
+
+    <!-- Phone Items -->
+
+    <section id="phoneItems">
+        <div id="phoneItemsId" class="wrapper">
+            <div class="phoneItem">
+                <div class="phoneImg">
+                    <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                </div>
+                <div class="specs">
+                    <h2>Lorem Ipsum</h2>
+                    <span>X500C</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                    <p class="price">$655.78</p>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <div class="phoneImg">
+                    <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                </div>
+                <div class="specs">
+                    <h2>Lorem Ipsum</h2>
+                    <span>X500C</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                    <p class="price">$655.78</p>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <div class="phoneImg">
+                    <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                </div>
+                <div class="specs">
+                    <h2>Lorem Ipsum</h2>
+                    <span>X500C</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                    <p class="price">$655.78</p>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <div class="phoneImg">
+                    <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                </div>
+                <div class="specs">
+                    <h2>Lorem Ipsum</h2>
+                    <span>X500C</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                    <p class="price">$655.78</p>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <div class="phoneImg">
+                    <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                </div>
+                <div class="specs">
+                    <h2>Lorem Ipsum</h2>
+                    <span>X500C</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                    <p class="price">$655.78</p>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <div class="phoneImg">
+                    <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                </div>
+                <div class="specs">
+                    <h2>Lorem Ipsum</h2>
+                    <span>X500C</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                    <p class="price">$655.78</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accosseries Intro -->
+
+    <section id="accosriesIntro">
+        <div id="accosriesIntroId" class="wrapper">
+            <div id="title2">
+                <h2>Accoisseries</h2>
+                <span>Temperes Glass, Chargers, Back covers and more..</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nam pariatur voluptatum! Saepe, modi non nihil nisi ullam est expedita! Et qui est consectetur libero, fugit officia. A et doloribus voluptates mollitia totam possimus suscipit blanditiis iusto, quod dicta cumque perspiciatis perferendis voluptatibus quaerat nisi pariatur, ab ipsam, aliquam ad reprehenderit officiis? Iste inventore perferendis rerum at nemo nihil pariatur vitae recusandae ex? Similique facilis modi consequuntur delectus dolor esse.</p>
+        </div>
+    </section>
+
+    <!-- Accosseries Items -->
+
+    <section id="accosserieItems">
+        <div id="accosserieItemsId" class="wrapper">
+            <!-- <div class="accosserieItem"> -->
+                <div class="phoneItem">
+                    <div class="phoneImg">
+                        <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                    </div>
+                    <div class="specs">
+                        <h2>Lorem Ipsum</h2>
+                        <span>X500C</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                        <p class="price">$655.78</p>
+                    </div>
+                </div>
+            <!-- </div> -->
+            <div class="phoneItem">
+                <div class="phoneImg">
+                    <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                </div>
+                <div class="specs">
+                    <h2>Lorem Ipsum</h2>
+                    <span>X500C</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                    <p class="price">$655.78</p>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <div class="phoneImg">
+                    <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                </div>
+                <div class="specs">
+                    <h2>Lorem Ipsum</h2>
+                    <span>X500C</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                    <p class="price">$655.78</p>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <div class="phoneImg">
+                    <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                </div>
+                <div class="specs">
+                    <h2>Lorem Ipsum</h2>
+                    <span>X500C</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                    <p class="price">$655.78</p>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <div class="phoneImg">
+                    <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                </div>
+                <div class="specs">
+                    <h2>Lorem Ipsum</h2>
+                    <span>X500C</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                    <p class="price">$655.78</p>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <div class="phoneImg">
+                    <img src="Design 02 Resources/smartphone.png" alt="SmartPhone">
+                </div>
+                <div class="specs">
+                    <h2>Lorem Ipsum</h2>
+                    <span>X500C</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias iusto amet numquam praesentium nisi repudiandae recusandae, nesciunt libero? Ea error vel aliquam non reiciendis voluptatum dolor neque voluptatem alias?</p>
+                    <p class="price">$655.78</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div id="footerMenu" class="wrapper">
+            <nav id="navMenu">
+                <a href="index.html">Home</a><span>|</span>
+                <a href="phones.html">Phone & Accosseries</a><span>|</span>
+                <a href="contact-us.html">Contact Us</a>
+            </nav>
+            <p>All Rights Reserved (C) WebClass</p>
+        </div>
+    </footer>
+
+</body>
+</html>

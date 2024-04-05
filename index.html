@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+
+        /* Fonts */
+
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+        :root{
+            --font1: 'Abel', sans-serif;
+        }
+
+        /* Common */
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .wrapper1{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        h1{
+            font-family: var(--font1);
+            font-size: 60px;
+        }
+        h2{
+            font-family: var(--font1);
+            font-size: 50px;
+        }
+        h3{
+            font-family: var(--font1);
+            font-size: 30px;
+        }
+        h4{
+            font-family: var(--font1);
+            font-size: 20px;
+        }
+        p{
+            font-family: var(--font1);
+            font-size: 16px;
+        }
+        a{
+            font-family: var(--font1);
+        }
+        span{
+            font-family: var(--font1);
+        }
+
+        /* Header */
+
+        #header{
+            background: white;
+            /* display: flex; */
+            /* justify-content: center; */
+        }
+        #headerId{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        #rightPart{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #logo{
+            width: 250px;
+        }
+        /* .upArrow{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        } */
+        #navMenu{
+            display: flex;
+            align-items: center;
+        }
+        #navMenu >img{
+            width: 50px;
+            /* display: none; */
+        }
+        #navMenu >a{
+            text-transform: uppercase;
+            color: #7f114b;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: lighter;
+        }
+        #navMenu >span{
+            font-family: var(--font1);
+        }
+        #one, #two{
+            display: none;
+        }
+        #noBorderR{
+            border: none !important;
+        }
+        #menuIcon{
+            width: 35px;
+        }
+        #navMenu >a:hover , .activeLink{
+            background: url('Design 02 Resources/up-arrow.svg')no-repeat center bottom;
+            /* background-repeat: no-repeat;
+            background-position: center bottom; */
+        }
+
+        /* Main section */
+
+        #mainSection{
+            background:linear-gradient(90deg,#b11f4c 40%,#430049);
+            /* display: flex; */
+            /* justify-content: center; */
+        }
+        #mainSectionId{
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 0 50px 0;
+        }
+        #intro{
+            width: 50%;
+            padding-top: 40px;
+        }
+        #intro >h1{
+            color: white;
+            text-transform: uppercase;
+            line-height: 80px;
+        }
+        #intro >h4{
+            padding-top: 15px;
+            color: #e9afaf;
+        }
+        #intro >button{
+            background: #e9afaf;
+            font-family: var(--font1);
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 40px;
+            color: #7f114b;
+            border: none;
+        }
+
+        /* 2 Step Section */
+
+        #tStepSection{
+            background: #44275d;
+            display: flex;
+            /* justify-content: center; */
+        }
+        #fStep{
+            margin-top: -80px;
+            display: flex;
+        }
+        #sStep{
+            display: flex;
+            margin-top: 70px;
+            margin-bottom: -80px;
+        }
+        .imgS{
+            position: relative;
+            width: 30%;
+            display: flex;
+        }
+        .description{
+            width: 70%;
+        }
+        #disOne{
+            padding-top: 150px;
+        }
+        #imgO{
+            justify-content: left;
+        }
+        #imgT{
+            justify-content: right;
+        }
+        #imgO::before{
+            position: absolute;
+            content: '';
+            background: #7f114b;
+            width: 220px;
+            height: 285px;
+            margin-top: 150px;
+            margin-left: 80px;
+        }
+        #imgT::before{
+            position: absolute;
+            content: '';
+            background: #7f114b;
+            width: 220px;
+            height: 285px;
+            margin-top: 150px;
+            margin-right: 80px;
+        }
+        .imgS >img{
+            position: relative;
+        }
+        .description >span{
+            color: white;
+            font-size: 70px;
+        }
+        .description >h3{
+            color: #ee0408;
+        }
+        .description >p{
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Sales Completed */
+
+        #sales{
+            background: #cec8c8;
+            display: flex;
+            /* justify-content: center; */
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+        #salesSectionId >h2{
+            color: red;
+            text-align: center;
+        }
+        #salesSectionId >p{
+            /* width: 80%; */
+            padding-top: 20px;
+            text-align: center;
+        }
+        .circle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            font-family: var(--font1);
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+            border: 2px solid white;
+        }
+        #fourCircle{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .circleFour{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .circleFour >span{
+            margin-top: 10px;
+        }
+
+        /* Contact Us */
+
+        #contactUs{
+            background-image:linear-gradient(rgba(118, 32, 142, 0.6), rgba(118, 32, 142, 0.6)), url('Design 02 Resources/banner.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 600px;
+            width: 100%;
+            display: flex;
+            /* justify-content: center; */
+        }
+        #contactUsId{
+            display: flex;
+            margin-top: 100px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        #leftDiv{
+            width: 50%;
+        }
+        #form{
+            width: 50%;
+        }
+        #imgContact{
+            position: relative;
+            padding-top: 30px;
+        }
+        #imgContact::before{
+            position: absolute;
+            content: '';
+            background: #7f114b;
+            width: 220px;
+            height: 285px;
+            margin-top: -20px;
+            margin-left: 80px;
+        }
+        #imgContact >img{
+            position: relative;
+        } 
+        #texts >h2{
+            text-transform: uppercase;
+            color: white;
+        } 
+        #texts >p{
+            color: white;
+            padding: 20px 0;
+        } 
+        .inputBox{
+            box-sizing: border-box;
+            background: #ce9aa2;
+            border: none;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            width: 75%;
+            height: 50px;
+            font-family: var(--font1);
+            font-size: 16px;
+            color: black;
+            padding: 20px;
+        }
+        form >textarea{
+            height: 100px !important;
+        } 
+        form > button{
+            background: #b01e4d;
+            font-family: var(--font1);
+            font-size: 22px;
+            color: white;
+            border: none;
+            width: 40%;
+            padding: 15px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-transform: uppercase;
+            box-shadow: 5px 10px 20px #00000069;
+        } 
+        
+        /* Big Four Cards */
+
+        /* 1st Section */
+
+        #fourCardsOne{
+            background: linear-gradient(90deg,#b11f4c 50%,#43005d 50%);
+        }
+        .bigCards{
+            display: flex;
+        }
+        #cardOne{
+            background: linear-gradient(135deg,#b11f4c 40%,#800080);
+            width: 50%;
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+        #cardOne >img{
+            width: 400px;
+        }
+        #cardTwo{
+            background: #43005d;
+            width: 50%;
+            padding-top: 100px;
+            padding-left: 100px;
+            box-sizing: border-box;
+            padding-bottom: 50px;
+        }
+        #cardTwo >span{
+            font-size: 100px;
+            color: white;
+        }
+        #cardTwo >h2{
+            color: red;
+            padding-bottom: 30px;
+            text-transform: uppercase;
+        }
+        #cardTwo >p{
+            color: white;
+        }
+
+        /* 2nd Section */
+
+        #fourCardsTwo{
+            background: linear-gradient(90deg,#e6e6e6 50%,#b11f4c 50%);
+        }
+        #cardFour{
+            background: linear-gradient(315deg,#b11f4c 40%,#800080);
+            width: 50%;
+            box-sizing: border-box;
+            padding-top: 100px;
+            padding-left: 80px;
+            padding-bottom: 50px;
+        }
+        #cardFour >img{
+            width: 500px;
+        }
+        #cardThree{
+            background: #e6e6e6;
+            width: 50%;
+            padding-top: 100px;
+            box-sizing: border-box;
+            padding-bottom: 50px;
+            padding-right: 100px;
+        }
+        #cardThree >h2{
+            color: red;
+            padding-bottom: 30px;
+            text-transform: uppercase;
+        }
+        #cardThree >p{
+            color: black;
+            margin-bottom: 20px;
+        }
+        #cardThree >button{
+            background: #600b70;
+            color: #e3bbc0;
+            font-size: 25px;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
+
+        /* Subscribe Section */
+
+        #subscribe{
+            background: #7c104b;
+        }
+        .wrapper2{
+            width: 945px;
+            margin: 0 auto;
+        }
+        #subscribeId{
+            padding-top: 70px;
+            padding-bottom: 60px;
+        }
+        #subscribeId >h2{
+            text-align: center;
+            font-size: 35px;
+            text-transform: uppercase;
+            color: #e3bbc0;
+            margin-bottom: 20px;
+        }
+        #subscribeId >p{
+            text-align: justify;
+            color: white;
+            margin-bottom: 30px;
+        }
+        #form2{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+        #form2 >input{
+            height: 56px;
+            background: #e9afaf;
+            border: none;
+            border-radius: 5px;
+            margin-right: 1px;
+            width: 90%;
+            font-size: 20px;
+            font-family: var(--font1);
+            padding-left: 40px;
+        }
+        #fButton{
+            margin-left: 1px;
+            box-shadow: none;
+        }
+
+        /* Footer */
+
+        #footer{
+            background: #241c1c;
+        }
+        #navMenu{
+            display: flex;
+            justify-content: center;
+        }
+        #navMenu >span{
+            padding: 0 5px;
+            color: #b11f4c;
+        }
+        #navMenu >a{
+            color: #b11f4c;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        #footerMenu{
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Media Query */
+
+        @media screen and (max-width:1250px) {
+            .wrapper{
+                width: 96%;
+            }
+            .wrapper1{
+                width: 98%;
+            }
+        }
+
+        @media screen and (max-width:1100px) {
+            .imgS{
+                width: 50%;
+            }
+            #disOne{
+                width: 50%;
+            }
+            .description{
+                width: 50%;
+            }
+            .inputBox{
+                width: 100%;
+            }
+            .bigCards{
+                flex-wrap: wrap;
+            }
+            #cardOne{
+                width: 100%;
+                text-align: center;
+            }
+            #cardTwo{
+                width: 100%;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            #cardThree{
+                width: 100%;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            #cardFour{
+                width: 100%;
+                text-align: center;
+                padding-left: 0;
+            }
+            .wrapper1{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            .wrapper2{
+                width: 96%;
+            }
+        }
+
+        @media screen and (max-width:790px) {
+            #mainSectionId{
+                flex-wrap: wrap;
+                text-align: center;
+                justify-content: center;
+            }
+            #intro{
+                width: 100%;
+                text-align: center;
+            }
+            #mainSectionId >img{
+                /* width: 100%; */
+                padding-top: 50px;
+            }
+            #fStep{
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 0;
+            }
+            #sStep{
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+                align-items: center;
+                margin-bottom: 0;
+            }
+            #imgO{
+                justify-content: flex-end;
+            }
+            .imgS{
+                width: 80%;
+            }
+            .imgS >img{
+                width: 50%;
+            }
+            #disOne{
+                width: 80%;
+                padding-top: 0px;
+                margin-top: -100px;
+            }
+            .description{
+                width: 80%;
+            }
+            #imgO::before{
+                width: 50%;
+                height: 75%;
+                margin-top: 135px;
+                margin-left: 0;
+                margin-right: -20px;
+            }
+            #imgT{
+                justify-content: left;
+            }
+            #sp{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                text-align: right;
+                margin-top: -110px;
+            }
+            #imgT::before{
+                width: 50%;
+                height: 75%;
+                margin-top: 135px;
+                margin-left: -25px;
+            }
+            #tStepSectionId{
+                padding-bottom: 50px;
+            }
+            #contactUs{
+                background-position: center;
+                height: 1100px;
+            }
+            #contactUsId{
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding-top: 50px;
+            }
+            #leftDiv{
+                width: 80%;
+                text-align: center;
+            }
+            #form{
+                margin-top: 50px;
+                align-items: center;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            #navMenu{
+                display: none;
+            }
+            #imgO::before{
+                margin-top: 115px;
+            }
+            #fourCircle{
+                flex-wrap: wrap;
+            }
+            .circleFour{
+                width: 50%;
+                margin-bottom: 20px;
+            }
+            #subscribeId{
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+            #subscribeId >h2{
+                font-size: 30px;
+            }
+            #subscribeId >p{
+                font-size: 14px;
+                text-align: center;
+            }
+            #form2 >input{
+                font-size: 16px;
+                height: 44px;
+            }
+            #form2 >button{
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+        }
+
+        @media screen and (max-width:630px) {
+            #imgT::before{
+                margin-top: 115px;
+            }
+            #tStepSectionId{
+                padding-bottom: 50px;
+            }
+            #imgContact >img{
+                width: 60%;
+            }
+            #imgContact::before{
+                width: 50%;
+                height: 75%;
+            }
+            #form{
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width:560px) {
+            #imgO::before{
+                margin-top: 95px;
+            }
+            #imgT::before{
+                margin-top: 100px;
+            }
+            #tStepSectionId{
+                padding-bottom: 50px;
+            }
+            #imgContact::before{
+                margin-left: 65px;
+            }
+            #cardOne >img{
+                width: 60%;
+            }
+            #cardTwo{
+                text-align: center;
+            }
+            #cardFour >img{
+                width: 60%;
+            }
+            #cardThree{
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width:450px) {
+            h1{
+                font-size: 50px;
+            }
+            #intro >h1{
+                line-height: 55px;
+            }
+            #mainSectionId >img{
+                width: 50%;
+            }
+            #mainSectionId{
+                padding-top: 10px;
+            }
+            #imgO::before{
+                margin-top: 77px;
+            }
+            #imgT::before{
+                margin-top: 77px;
+            }
+            #tStepSectionId{
+                padding-bottom: 50px;
+            }
+            #imgContact::before{
+                margin-left: 55px;
+            }
+            #cardOne{
+                padding-top: 30px;
+            }
+            #cardTwo{
+                padding-top: 30px;
+            }
+            #cardTwo >span{
+                font-size: 40px;
+            }
+            #cardTwo >h2{
+                font-size: 40px;
+                padding-bottom: 10px    ;
+            }
+            #cardThree >h2{
+                font-size: 40px;
+                padding-bottom: 10px;
+            }
+            #cardThree >button{
+                margin-top: 0;
+                font-size: 15px;
+                padding: 10px 20px;
+            }
+            #cardThree{
+                padding-top: 30px;
+            }
+            #cardFour{
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+            #form2{
+                flex-direction: column;
+            }
+            #form2 >button{
+                margin-top: 10px;
+                width: 100%;
+            }
+            
+        }
+
+        @media screen and (max-width:400px) {
+            #sales{
+                padding-top: 25px;
+            }
+            .circleFour{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:350px) {
+            #imgO{
+                justify-content: center;
+            }
+            #imgT{
+                justify-content: center;
+            }
+            #imgO::before{
+                margin-top: 67px;
+            }
+            #imgT::before{
+                margin-left: 50px;
+                margin-top: 70px;
+            }
+            #disOne{
+                margin-top: 0;
+                text-align: center;
+                margin-top: 50px;
+            }
+            #sp{
+                text-align: center;
+                align-items: center;
+                margin-top: 50px;
+            }
+            #tStepSectionId{
+                padding-bottom: 50px;
+            }
+            #imgContact::before{
+                margin-left: 45px;
+            }
+            #form2 >input{
+                padding: 0 0 0 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header id="header">
+        <div id="headerId" class="wrapper">
+            <img id="logo" src="Design 02 Resources/logo.svg" alt="Logo">
+            <div id="rightPart">
+                <nav id="navMenu">
+                    <a class="activeLink" href="index.html">Home</a>
+                    <span>|</span>
+                    <a href="phones.html">Phone & Accessories</a>
+                    <span>|</span>
+                    <a id="noBorderR" href="contact-us.html">Contact Us</a>
+                </nav>
+                <img id="menuIcon" src="Design 02 Resources/menu-icon.svg" alt="Menu Icon">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+
+    <section id="mainSection">
+        <div id="mainSectionId" class="wrapper">
+            <div id="intro">
+                <h1>Now Available <br> In-Store & Online</h1>
+                <h4>We are an authorised reseller</h4>
+                <button>View Phones & Accessories</button>
+            </div>
+            <img src="Design 02 Resources/two-phones.png" alt="">
+        </div>
+    </section>
+
+    <!-- 2 Step Section -->
+
+    <section id="tStepSection">
+        <div id="tStepSectionId" class="wrapper">
+            <div id="fStep">
+                <div id="imgO" class="imgS">
+                    <img src="images/girl-with-phone.png" alt="Girl with Phone">
+                </div> 
+                <div id="disOne" class="description">
+                    <span>01</span><h3>Best Prices <br> in town</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non fuga itaque eos doloremque cum animi atque ipsum error quasi neque eius, unde, vitae blanditiis commodi sunt et fugiat expedita maxime!</p>
+                </div>
+            </div>
+            <div id="sStep">
+                <div id="sp" class="description">
+                    <span>02</span><h3>After Sales <br> Service Support</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non fuga itaque eos doloremque cum animi atque ipsum error quasi neque eius, unde, vitae blanditiis commodi sunt et fugiat expedita maxime!</p>
+                </div>
+                <div id="imgT" class="imgS">
+                    <img src="images/boy-with-phone.png" alt="Boys with Phone">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sales Completed -->
+
+    <secion id="sales">
+        <div id="salesSectionId" class="wrapper">
+            <h2>Sales Completed</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat a numquam quasi vero nemo aliquam et maxime neque. Laudantium, iusto earum! Amet deleniti enim minima. Consectetur, quam facere. Vero, labore.</p>
+            <div id="fourCircle">
+                <div class="circleFour">
+                    <div class="circle">884</div>
+                    <span>Phone <br> Back Covers</span>
+                </div>
+                <div class="circleFour">
+                    <div class="circle">975</div>
+                    <span>Phone <br> Chargers</span>
+                </div>
+                <div class="circleFour">
+                    <div class="circle">1578</div>
+                    <span>Tempered <br> Glass</span>
+                </div>
+                <div class="circleFour">
+                    <div class="circle">6652</div>
+                    <span>Mobile Phones <br> (iphone & samsung)</span>
+                </div>
+            </div>
+        </div>
+    </secion>
+
+    <!-- Contact Us -->
+
+    <section id="contactUs">
+        <div id="contactUsId" class="wrapper">
+            <div id="leftDiv">
+                <div id="texts">
+                    <h2>Contact Us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid eius deserunt molestias, mollitia eaque.</p>
+                </div>
+                <div id="imgContact">
+                    <img src="Design 02 Resources/customer-support.png" alt="Customer Support">
+                </div>
+            </div>
+            <form id="form" action="">
+                <input class="inputBox" type="text" placeholder="Your Name">
+                <input class="inputBox" type="text" placeholder="Email Address">
+                <textarea class="inputBox" rows="5" placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Big Four Cards -->
+
+    <!-- 1st Section -->
+
+    <section id="fourCardsOne">
+        <div class=" bigCards wrapper1">
+            <div id="cardOne">
+                <img src="Design 02 Resources/headphone-with-phone.png" alt="HeadPhone with Phone">           
+            </div>
+            <div id="cardTwo">
+                <span>03</span>
+                <h2>Purchase More And Win Prizes</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam cupiditate autem blanditiis, saepe eos adipisci quasi non aperiam. Odio debitis neque tenetur rerum facilis porro?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2nd Section -->
+
+    <section id="fourCardsTwo">
+        <div class=" bigCards wrapper1">
+            <div id="cardThree">
+                <h2>Refer a Freind <br> and Get 20% Off</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam cupiditate autem blanditiis, saepe eos adipisci quasi non aperiam. Odio debitis neque tenetur rerum facilis porro?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure molestias dolor, illum unde aspernatur veniam aliquam, voluptatibus distinctio adipisci ipsam ex minima ullam ab aut doloremque dolorum perferendis? Cumque, odio optio? Est tempora illo aspernatur quam aperiam, blanditiis inventore sed.</p>
+                <button>Read More >></button>
+            </div>
+            <div id="cardFour">
+                <img src="Design 02 Resources/promotion.png" alt="HeadPhone with Phone">           
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+
+    <section id="subscribe">
+        <div id="subscribeId" class="wrapper2">
+            <h2>Subscribe and Get the Lastest Price List Every Weekend</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero debitis aperiam est doloremque veniam possimus sint optio doloribus tempore laborum quia sed incidunt, officia porro atque cum quae illum ab.</p>
+            <form action="" id="form2">
+                <input type="email" placeholder="Email Address">
+                <button id="fButton">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div id="footerMenu" class="wrapper">
+            <nav id="navMenu">
+                <a href="index.html">Home</a><span>|</span>
+                <a href="phones.html">Phone & Accosseries</a><span>|</span>
+                <a href="contact-us.html">Contact Us</a>
+            </nav>
+            <p>All Rights Reserved (C) WebClass</p>
+        </div>
+    </footer>
+
+</body>
+</html>
